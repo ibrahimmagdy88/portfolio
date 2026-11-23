@@ -113,6 +113,35 @@ window.PROJECTS = [
     featured: true,
     video: "assets/igold-cover.mp4",
     poster: "assets/igold-cover.jpg",
+    shots: {
+      context: [
+        { src: "assets/igold/igold-ia.webp", w: 1024, h: 859, size: "full",
+          cap: "Merchant app structure: every path from sign-in to products, pricing modes, orders and reports.",
+          capAr: "هيكل تطبيق التاجر: كل المسارات من تسجيل الدخول إلى المنتجات وأنواع التسعير والطلبات والتقارير." }
+      ],
+      work: [
+        { src: "assets/igold/igold-brand.webp", w: 918, h: 1024, size: "full",
+          cap: "Brand foundations: IBM Plex Sans and a palette built around gold.",
+          capAr: "أساسيات الهوية: خط IBM Plex Sans ولوحة ألوان مبنية حول الذهب." },
+        { src: "assets/igold/igold-customer-app.webp", w: 600, h: 599, size: "half",
+          cap: "Customer app: browsing collections and a cart split by merchant.",
+          capAr: "تطبيق العميل: تصفح المجموعات وسلة مقسّمة حسب التاجر." },
+        { src: "assets/igold/igold-merchant-app.webp", w: 600, h: 599, size: "half",
+          cap: "Merchant role: sales at a glance and orders to accept or reject.",
+          capAr: "دور التاجر: المبيعات بنظرة سريعة وطلبات للقبول أو الرفض." },
+        { src: "assets/igold/igold-dashboard.webp", w: 620, h: 817, size: "narrow",
+          cap: "Merchant dashboard: POS, sales, products and stock in one workspace.",
+          capAr: "لوحة تحكم التاجر: نقطة البيع والمبيعات والمنتجات والمخزون في مساحة واحدة." }
+      ],
+      hard: [
+        { src: "assets/igold/igold-two-roles.webp", w: 535, h: 967, size: "narrow",
+          cap: "One app, two roles: a single sign-in with a merchant toggle instead of two separate apps.",
+          capAr: "تطبيق واحد ودوران: تسجيل دخول واحد مع زر للتحويل إلى التاجر بدلاً من تطبيقين منفصلين." },
+        { src: "assets/igold/igold-pricing.webp", w: 1024, h: 836, size: "full",
+          cap: "Add product: the form reshapes itself around the pricing mode the merchant picks.",
+          capAr: "إضافة منتج: النموذج يتغير حسب نوع التسعير الذي يختاره التاجر." }
+      ]
+    },
     name: "iGold",
     short: "Jewelry commerce & POS",
     date: "2024-03",

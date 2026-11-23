@@ -510,6 +510,25 @@ main { position: relative; z-index: 2; background: var(--ink); border-radius: 0 
 .dr-sec li { position: relative; padding-inline-start: 20px; max-width: 64ch; color: var(--fg); }
 .dr-sec li::before { content: ""; position: absolute; inset-inline-start: 2px; top: calc(.78em - 1px); width: 8px; height: 2px; border-radius: 1px; background: var(--select); }
 .dr-sec.ch-l li::before { background: var(--ember); }
+/* real project screens inside the case study */
+.dr-shots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 22px; }
+.dr-shot { margin: 0; grid-column: 1 / -1; }
+.dr-shot.s-half { grid-column: auto; }
+.dr-shot.s-narrow .dr-zoom { max-width: 420px; margin-inline: auto; }
+.dr-zoom { display: block; width: 100%; padding: 0; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: #000; cursor: zoom-in; transition: border-color .25s, transform .4s var(--ease); }
+.dr-zoom:hover { border-color: var(--line-2); }
+.dr-zoom:focus-visible { outline: 2px solid var(--select); outline-offset: 3px; }
+.dr-zoom img { display: block; width: 100%; height: auto; }
+.dr-shot figcaption { margin-top: 10px; font-size: 13px; line-height: 1.5; color: var(--fg-3); max-width: 60ch; }
+.dr-shot.s-narrow figcaption { text-align: center; margin-inline: auto; }
+.dr-sec.ch-l .dr-shots { margin-top: 26px; }
+@media (max-width: 560px) { .dr-shot.s-half { grid-column: 1 / -1; } }
+.lb { position: absolute; inset: 0; z-index: 5; display: grid; place-items: center; padding: 64px 20px 28px; background: rgba(4,5,7,.94); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); cursor: zoom-out; opacity: 0; transition: opacity .25s; }
+.lb.on { opacity: 1; }
+.lb figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 12px; max-height: 100%; }
+.lb img { max-width: 100%; max-height: calc(100vh - 150px); object-fit: contain; border-radius: 12px; }
+.lb figcaption { font-size: 13px; color: var(--fg-2); text-align: center; max-width: 60ch; }
+.lb-x { position: absolute; top: 14px; inset-inline-end: 14px; }
 .dr-plat { display: flex; flex-wrap: wrap; gap: 6px; }
 .dr-learn { padding: 20px 22px; border-radius: 16px; background: var(--ink-3); border: 1px solid var(--line); font-size: 17px; color: var(--fg) !important; max-width: none !important; }
 .dr-links { display: flex; flex-wrap: wrap; gap: 8px; }

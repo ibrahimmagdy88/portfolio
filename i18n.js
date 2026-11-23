@@ -185,7 +185,7 @@ window.AR = {
   UI: {
     open: "افتح دراسة الحالة", product: "منتج", products: "منتجات", live: "مباشر",
     designed: "ما صممته", context: "السياق", work: "عملي", hard: "التحديات", learned: "ما تعلمته",
-    seeLive: "شاهده مباشرة", next: "المشروع التالي", gallery: "صور من المشروع",
+    seeLive: "شاهده مباشرة", next: "المشروع التالي", gallery: "صور من المشروع", zoom: "عرض أكبر",
     year: "السنة", company: "الشركة", role: "الدور", sector: "القطاع",
     copied: "تم نسخ البريد", select: "تم التحديد. اضغط Ctrl+C أو ⌘C للنسخ", toLang: "Switch to English"
   },

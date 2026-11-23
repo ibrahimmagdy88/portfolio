@@ -615,6 +615,14 @@ void main(){
   const drawer = $("#drawer");
   function sec(title, body, cls = "") { return `<section class="dr-sec ${cls}"><h4>${title}</h4>${body}</section>`; }
   function ul(list) { return `<ul>${list.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>`; }
+  /* real screens placed after the section they illustrate: p.shots = { context: [], work: [], hard: [] } */
+  function shots(p, key) {
+    const list = p.shots && p.shots[key]; if (!list || !list.length) return "";
+    return `<div class="dr-shots">${list.map((s) => {
+      const cap = esc((isAr() && s.capAr) || s.cap || "");
+      return `<figure class="dr-shot s-${s.size || "full"}"><button type="button" class="dr-zoom" data-zoom="${s.src}" data-cap="${cap}" aria-label="${ui("zoom", "View larger")}: ${cap}"><img src="${s.src}" alt="${cap}" loading="lazy" decoding="async"${s.w ? ` width="${s.w}" height="${s.h}"` : ""}></button>${cap ? `<figcaption>${cap}</figcaption>` : ""}</figure>`;
+    }).join("")}</div>`;
+  }
   function renderProject(p) {
     const i = ORDER.indexOf(p), next = loc(ORDER[(i + 1) % ORDER.length]);
     p = loc(p);
@@ -625,10 +633,10 @@ void main(){
       <p class="dr-sum">${esc(p.summary)}</p>
       <dl class="dr-meta"><div><dt>${ui("year", "Year")}</dt><dd>${esc(p.year)}</dd></div><div><dt>${ui("company", "Company")}</dt><dd>${esc(p.company)}</dd></div><div><dt>${ui("role", "Role")}</dt><dd>${esc(p.role)}</dd></div><div><dt>${ui("sector", "Sector")}</dt><dd>${esc(p.sector)}</dd></div></dl>
       ${sec(`${ui("designed", "What I designed")} · ${count(p.platforms.length)}`, `<div class="dr-plat">${p.platforms.map((x) => `<span class="tag">${esc(x)}</span>`).join("")}</div>`)}
-      ${p.context ? sec(ui("context", "Context"), `<p>${esc(p.context)}</p>`) : ""}
-      ${p.did && p.did.length ? sec(ui("work", "My work"), ul(p.did)) : ""}
+      ${p.context ? sec(ui("context", "Context"), `<p>${esc(p.context)}</p>${shots(p, "context")}`) : ""}
+      ${p.did && p.did.length ? sec(ui("work", "My work"), ul(p.did) + shots(p, "work")) : ""}
       ${p.gallery && p.gallery.length ? sec(ui("gallery", "Screens"), `<div class="dr-gal">${p.gallery.map((g) => `<img src="${g}" alt="" loading="lazy" onerror="this.remove()">`).join("")}</div>`) : ""}
-      ${p.challenges && p.challenges.length ? sec(ui("hard", "The hard parts"), ul(p.challenges), "ch-l") : ""}
+      ${p.challenges && p.challenges.length ? sec(ui("hard", "The hard parts"), ul(p.challenges) + shots(p, "hard"), "ch-l") : ""}
       ${p.learned ? sec(ui("learned", "What I took away"), `<p class="dr-learn">${esc(p.learned)}</p>`) : ""}
       ${p.links && p.links.length ? sec(ui("seeLive", "See it live"), `<div class="dr-links">${p.links.map((l) => `<a href="${l.url}" target="_blank" rel="noopener">${esc(l.label)} ${EXT}</a>`).join("")}</div>`) : ""}
       <button type="button" class="dr-next" data-goto="${next.id}"><span><small>${ui("next", "Next project")}</small><b>${esc(next.name)}</b></span>${ARROW}</button>`;
@@ -694,6 +702,7 @@ void main(){
     try { history.replaceState(null, "", "#" + id); } catch (e) {}
   }
   function closeProject() {
+    const lb = $("#lb"); if (lb && !lb.hidden) { lb.classList.remove("on"); lb.hidden = true; }
     if (!drawerOpen) return;
     drawer.classList.remove("open"); drawerOpen = false;
     document.body.style.overflow = "";
@@ -704,7 +713,14 @@ void main(){
   }
   function drawerEvents() {
     const step = (d) => { const i = ORDER.findIndex((p) => p.id === curId); openProject(ORDER[(i + d + ORDER.length) % ORDER.length].id); };
+    const lb = $("#lb"), lbImg = $("#lbImg"), lbCap = $("#lbCap");
+    let lbFrom = null;
+    const lbOpen = () => !lb.hidden;
+    const openLb = (btn) => { lbFrom = btn; lbImg.src = btn.dataset.zoom; lbImg.alt = btn.dataset.cap || ""; lbCap.textContent = btn.dataset.cap || ""; lb.hidden = false; requestAnimationFrame(() => lb.classList.add("on")); $("#lbX").focus({ preventScroll: true }); };
+    const closeLb = () => { lb.classList.remove("on"); lb.hidden = true; lbImg.removeAttribute("src"); if (lbFrom) lbFrom.focus({ preventScroll: true }); };
+    lb.addEventListener("click", (e) => { e.stopPropagation(); closeLb(); });
     drawer.addEventListener("click", (e) => {
+      const z = e.target.closest("[data-zoom]"); if (z) { openLb(z); return; }
       if (e.target.closest("[data-close]")) closeProject();
       const g = e.target.closest("[data-goto]"); if (g) openProject(g.dataset.goto);
     });
@@ -712,6 +728,7 @@ void main(){
     $("#drNext").addEventListener("click", () => step(1));
     document.addEventListener("keydown", (e) => {
       if (!drawerOpen) return;
+      if (lbOpen()) { if (e.key === "Escape" || e.key === "Tab") { e.preventDefault(); closeLb(); } return; }
       if (e.key === "Escape") closeProject();
       if (e.key === "ArrowRight") step(1);
       if (e.key === "ArrowLeft") step(-1);
