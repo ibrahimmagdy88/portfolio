@@ -1,0 +1,454 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Ibrahim Magdy Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Ibrahim Magdy is a senior product designer in Cairo designing travel, fintech, logistics and commerce products end to end: customer apps, operator tools and the dashboards behind them.">
+<meta name="theme-color" content="#040507">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400..700&family=Archivo:wdth,wght@62..125,100..900&family=Geist+Mono:wght@400..600&family=Geist:wght@300..700&display=swap">
+<link rel="stylesheet" href="styles.css">
+
+<a class="skip" href="#work">Skip to selected work</a>
+
+<!-- App chrome: the page sits inside a ruled frame, like a canvas in a design tool -->
+<div class="frame" aria-hidden="true">
+  <div class="rail rail-t"><div class="rnum" id="rnum"></div><i class="rhi rhi-x" id="rhx"></i></div>
+  <div class="rail rail-l"><i class="rscroll" id="rscroll"></i><i class="rhi rhi-y" id="rhy"></i></div>
+  <div class="rail rail-r"></div>
+  <i class="corner c-tl"></i><i class="corner c-tr"></i>
+</div>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Ibrahim Magdy, back to top">
+    <span class="mark">IM</span>
+    <span class="brand-t"><b>Ibrahim Magdy</b><span>Product Designer</span></span>
+  </a>
+  <nav class="pill" id="pill" aria-label="Sections">
+    <i class="pill-ind" id="pillInd"></i>
+    <a href="#work" data-scramble>Work</a>
+    <a href="#journey" data-scramble>Journey</a>
+    <a href="#capabilities" data-scramble>Craft</a>
+    <a href="#services" data-scramble>Services</a>
+    <a href="#about" data-scramble>About</a>
+  </nav>
+  <div class="nav-r">
+    <button class="lang-btn" id="langBtn" type="button" aria-label="عرض الموقع بالعربية" lang="ar">ع</button>
+    <a class="btn btn-w btn-sm mag" href="#contact">Let’s talk</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu"><span></span><span></span><b class="sr-only">Menu</b></button>
+  </div>
+</header>
+
+<div class="menu" id="menu" hidden>
+  <nav class="menu-links" aria-label="Mobile">
+    <a href="#work"><span class="mono">01</span>Work</a>
+    <a href="#journey"><span class="mono">02</span>Journey</a>
+    <a href="#capabilities"><span class="mono">03</span>Craft</a>
+    <a href="#services"><span class="mono">04</span>Services</a>
+    <a href="#about"><span class="mono">05</span>About</a>
+    <a href="#contact"><span class="mono">06</span>Contact</a>
+  </nav>
+  <div class="menu-foot">
+    <span class="mono">ibrahimagdy.o@gmail.com</span>
+    <span class="mono">Cairo · <span data-clock>--:--</span></span>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ============================================================ HERO -->
+  <section class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true">
+      <canvas id="flow"></canvas>
+      <div class="dots"></div>
+    </div>
+
+    <div class="container hero-in">
+      <div class="hero-meta">
+        <span class="mono">Product Designer · Senior UI/UX</span>
+        <span class="mono">Cairo, Egypt · <span data-clock>--:--</span> <span data-tz></span></span>
+        <span class="avail"><i></i>Open to full-time roles &amp; freelance</span>
+      </div>
+
+      <div class="sel-wrap">
+        <div class="sel" id="sel" data-keep>
+          <span class="sel-lbl" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M3.5 1v10M8.5 1v10M1 3.5h10M1 8.5h10"/></svg>Ibrahim Magdy</span>
+          <h1 class="name" id="name"><span class="sr-only">Ibrahim Magdy, product designer</span><span class="name-v" aria-hidden="true"><span class="w">Ibrahim</span><span class="w">Magdy</span></span></h1>
+          <span class="sel-box" aria-hidden="true"><i class="hd h-tl"></i><i class="hd h-tr"></i><i class="hd h-bl"></i><i class="hd h-br"></i></span>
+          <span class="sel-dim" id="dim" aria-hidden="true">Hug × Hug</span>
+          <span class="mc" id="mc" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M2.5 1.8l14.2 6-6.2 1.9-2.3 6.1z"/></svg><b>Ibrahim</b></span>
+        </div>
+      </div>
+
+      <div class="hero-foot">
+        <div class="lede-w">
+          <p class="lede">I design end-to-end products for <em>travel, fintech, logistics</em> and <em>commerce</em>: the customer app, the tools operators use every day, and the dashboards behind them. In Arabic and English.</p>
+          <p class="now"><span class="mono">Now</span><span>Designing <span class="rot" id="rot" aria-live="off"><span>travel booking flows</span></span> at Techeffic</span></p>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-w mag" href="#work">View selected work <svg class="i" viewBox="0 0 16 16"><path d="M8 3v10M3.5 8.5L8 13l4.5-4.5"/></svg></a>
+          <a class="btn btn-o mag" href="#contact">Get in touch</a>
+          <a class="lnk cv-dl" href="assets/Ibrahim-Magdy-CV.pdf" target="_blank" rel="noopener">Download CV <span class="mono">PDF</span></a>
+        </div>
+      </div>
+
+      <div class="stats" id="stats">
+        <div class="stat"><b><span data-count="5">5</span>+</b><span class="mono">Years in product design</span></div>
+        <div class="stat"><b><span data-count="20">20</span>+</b><span class="mono">Products shipped</span></div>
+        <div class="stat"><b><span data-count="60">60</span>+</b><span class="mono">Apps, dashboards &amp; sites</span></div>
+        <div class="stat"><b><span data-count="15">15</span></b><span class="mono">Industries</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ MARQUEE -->
+  <section class="mq" aria-label="Industries and products">
+    <div class="mq-row a" id="mqA"></div>
+    <div class="mq-row b" id="mqB"></div>
+  </section>
+
+  <!-- ============================================================ MANIFEST -->
+  <section class="manifest">
+    <div class="container">
+      <span class="eyebrow"><svg viewBox="0 0 12 12"><path d="M3.5 1v10M8.5 1v10M1 3.5h10M1 8.5h10"/></svg>In short</span>
+      <p class="sr" id="sr">I started as a graphic designer. On my first day at a Saudi software company I was handed a complete clinic-booking app instead of a logo, as the only designer in the building. Since then I have designed more than twenty products, from single screens to eight-platform operating systems, and learned to ship them side by side with product managers, engineers and QA.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================ WORK -->
+  <section class="work" id="work">
+    <div class="container">
+      <div class="sh">
+        <div>
+          <span class="eyebrow"><svg viewBox="0 0 12 12"><path d="M3.5 1v10M8.5 1v10M1 3.5h10M1 8.5h10"/></svg>Selected work · 2022 – 2026</span>
+          <h2 class="h2 split">Products with many users and one system behind them</h2>
+        </div>
+        <p class="sh-note">Eight case studies. Open any project for the full story: the context, what I designed, the hard parts and what I took away.</p>
+      </div>
+      <div class="work-grid" id="workGrid"></div>
+
+      <div class="live">
+        <div class="live-h">
+          <span class="eyebrow"><i class="pulse"></i>Live in the stores</span>
+          <p>Products I designed that you can open right now.</p>
+        </div>
+        <div class="live-list" id="liveList"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ JOURNEY -->
+  <section class="journey" id="journey">
+    <div class="j-pin" id="jPin">
+      <div class="container j-head">
+        <div>
+          <span class="eyebrow"><svg viewBox="0 0 12 12"><path d="M3.5 1v10M8.5 1v10M1 3.5h10M1 8.5h10"/></svg>The journey · 2020 – 2026</span>
+          <h2 class="h2 split">From graphic designer to product designer</h2>
+        </div>
+        <div class="zoom" aria-hidden="true"><span>−</span><b id="zoomVal">800%</b><span>+</span></div>
+      </div>
+
+      <div class="j-view" id="jView">
+        <div class="j-track" id="jTrack">
+          <article class="ch" data-zoom="800%">
+            <div class="ch-art" data-art="pixel"></div>
+            <div class="ch-txt">
+              <div class="ch-meta"><span class="mono">2020 – 2021</span><span class="zchip">800%</span></div>
+              <h3>The pixel</h3>
+              <p>I studied commerce at Cairo University, but design found me during military service. I made the unit’s banners and visuals, then designed my first interface in Adobe XD: a small system for officers’ leave requests. After service I joined NTI’s graphic design program, took my first freelance UI project with a developer (a book-selling and reading-meetups platform) and interned at Nahdet Misr.</p>
+              <ul class="ch-facts"><li>Military service · Jan 2020 – Mar 2021</li><li>NTI Graphic Design · Jun – Jul 2021</li><li>Nahdet Misr internship · Oct 2021</li></ul>
+            </div>
+          </article>
+
+          <article class="ch" data-zoom="400%">
+            <div class="ch-art" data-art="screen"></div>
+            <div class="ch-txt">
+              <div class="ch-meta"><span class="mono">January 2022</span><span class="zchip">400%</span></div>
+              <h3>The screen</h3>
+              <p>I joined Fantastic Hosting as a graphic designer after passing a brand-identity test. On day one, the task was a complete clinic-booking app, Tabibak, and I was the only designer in the company. I learned fast and shipped it. Looking back, I skipped research and user flows, had no design system or components, and even put hover states on mobile buttons. Those mistakes became my checklist.</p>
+              <ul class="ch-facts"><li>Tabibak, my first app</li><li>Al Braheem: 8 connected products</li></ul>
+            </div>
+          </article>
+
+          <article class="ch" data-zoom="200%">
+            <div class="ch-art" data-art="flow"></div>
+            <div class="ch-txt">
+              <div class="ch-meta"><span class="mono">Mid – late 2022</span><span class="zchip">200%</span></div>
+              <h3>The experience</h3>
+              <p>Good-looking screens weren’t enough, so I went deeper: advanced prototyping, then Udacity’s Advanced UX Nanodegree, where I learned interviews, surveys, research synthesis and reporting. On Adelco I ran my first structured process: stakeholder sessions, competitor analysis, information architecture, wireframes and a style guide, on a phased delivery plan. In October I redesigned Tabibak and could see how far I’d come.</p>
+              <ul class="ch-facts"><li>Udacity Advanced UX · 3 months</li><li>Adelco · Al Khwarizmi · Tabibak v2</li></ul>
+            </div>
+          </article>
+
+          <article class="ch" data-zoom="100%">
+            <div class="ch-art" data-art="system"></div>
+            <div class="ch-txt">
+              <div class="ch-meta"><span class="mono">2023 – 2024</span><span class="zchip">100%</span></div>
+              <h3>The system</h3>
+              <p>Most of my work became multi-sided systems: one product for customers, others for drivers, technicians, merchants, banks or school staff, all sharing one backbone. iGold combined commerce, POS and inventory. Highway grew new services after launch. Tasahl ran on my first design system with light and dark modes. In parallel I designed fintech and marketplace products for Cashpoint, and in 2024 took Syntax’s Advanced UX/UI program.</p>
+              <ul class="ch-facts"><li>Cashpoint, part-time · 2022 – 2024</li><li>Syntax Advanced UX/UI · 2024</li></ul>
+            </div>
+          </article>
+
+          <article class="ch" data-zoom="Fit">
+            <div class="ch-art" data-art="loop"></div>
+            <div class="ch-txt">
+              <div class="ch-meta"><span class="mono">2025 – now</span><span class="zchip">Fit</span></div>
+              <h3>The product</h3>
+              <p>At Techeffic I work on live travel products that people search and book on every day. Design is one part of the product cycle: I frame problems with product managers, decide with data, review builds with engineering and QA, maintain a design system shared by several products, and use AI tools to research and explore faster.</p>
+              <ul class="ch-facts"><li>Techeffic · Senior UI/UX Designer</li><li>Flights · hotels · transfers · sports</li></ul>
+            </div>
+          </article>
+
+          <article class="ch ch-end">
+            <p class="quote">In 2022 I was learning to design a screen. Then an experience. Then a whole system. <span>Now I help build products that keep evolving.</span></p>
+          </article>
+        </div>
+      </div>
+
+      <div class="container j-foot" aria-hidden="true">
+        <div class="j-prog"><i id="jBar"></i></div>
+        <span class="mono" id="jLbl">Scroll</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ CAPABILITIES -->
+  <section class="caps" id="capabilities">
+    <div class="container">
+      <div class="sh">
+        <div>
+          <span class="eyebrow"><svg viewBox="0 0 12 12"><path d="M3.5 1v10M8.5 1v10M1 3.5h10M1 8.5h10"/></svg>Craft</span>
+          <h2 class="h2 split">What I bring to a team</h2>
+        </div>
+        <p class="sh-note">A product designer who can take a problem from the first workshop to the final build review, and who sweats the details that make products feel trustworthy.</p>
+      </div>
+
+      <div class="bento" id="bento">
+        <div class="bx b-process" data-ruler>
+          <span class="bx-k mono">Process</span>
+          <h3>End to end, from problem to production</h3>
+          <ol class="steps-row">
+            <li><b>Frame</b><span>Goals, constraints and success metrics with PMs</span></li>
+            <li><b>Research</b><span>Competitors, heuristic reviews, flow audits</span></li>
+            <li><b>Structure</b><span>User flows and information architecture</span></li>
+            <li><b>Prototype</b><span>Interactive prototypes to test ideas early</span></li>
+            <li><b>Design</b><span>High-fidelity UI on a shared system</span></li>
+            <li><b>Ship</b><span>Handoff, UI review and QA with engineering</span></li>
+          </ol>
+        </div>
+
+        <div class="bx b-rtl" data-ruler>
+          <div class="bx-top"><span class="bx-k mono">Localization</span>
+            <div class="seg-ui" role="group" aria-label="Interface language"><button type="button" class="on" data-dir="ltr">EN</button><button type="button" data-dir="rtl" lang="ar">ع</button></div></div>
+          <h3>Arabic and English, RTL from the start</h3>
+          <div class="rtl-card" id="rtlCard" dir="ltr">
+            <div class="rc-row"><span class="rc-ic"><svg viewBox="0 0 24 24"><path d="M3 13l18-7-5 14-3-6zM13 14l-2 5"/></svg></span>
+              <div class="rc-t"><b data-en="Flight to Jeddah" data-ar="رحلة إلى جدة">Flight to Jeddah</b><span data-en="Tue, 12 Nov · 08:40" data-ar="الثلاثاء ١٢ نوفمبر · ٠٨:٤٠">Tue, 12 Nov · 08:40</span></div>
+              <b class="rc-p" data-en="SAR 1,240" data-ar="١٬٢٤٠ ر.س">SAR 1,240</b></div>
+            <span class="rc-btn"><span data-en="Book now" data-ar="احجز الآن">Book now</span><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+          </div>
+        </div>
+
+        <div class="bx b-ds" data-ruler>
+          <div class="bx-top"><span class="bx-k mono">Design systems</span>
+            <div class="seg-ui" role="group" aria-label="Theme mode"><button type="button" data-mode="light">Light</button><button type="button" class="on" data-mode="dark">Dark</button></div></div>
+          <h3>Tokens, components, modes</h3>
+          <div class="ds-demo dark" id="dsDemo">
+            <div class="ds-row"><span class="ds-chip">Used · Like new</span><span class="ds-chip ac">Verified store</span></div>
+            <div class="ds-input">Search games, consoles…</div>
+            <div class="ds-row"><span class="ds-btn">Add to cart</span><span class="ds-btn ghost">Save</span></div>
+            <div class="ds-tokens"><span><i style="background:var(--ds-bg)"></i>surface/base</span><span><i style="background:var(--ds-fg)"></i>text/primary</span><span><i style="background:var(--ds-ac)"></i>brand/accent</span></div>
+          </div>
+        </div>
+
+        <div class="bx b-data" data-ruler>
+          <span class="bx-k mono">B2B &amp; dashboards</span>
+          <h3>Data-rich tools people use all day</h3>
+          <div class="mini-dash">
+            <div class="md-k"><span class="mono">Bookings · this week</span><b>12,480</b><em>▲ 8.2%</em></div>
+            <div class="md-bars" id="mdBars"></div>
+          </div>
+        </div>
+
+        <div class="bx b-a11y" data-ruler>
+          <span class="bx-k mono">Accessibility</span>
+          <h3>WCAG 2.1 AA as a baseline</h3>
+          <div class="a11y">
+            <div class="a11y-s"><span class="aa">Aa</span><div><b id="ratio">17.6 : 1</b><span class="mono">Body text contrast on this page</span></div></div>
+            <ul class="a11y-l"><li>Contrast &amp; focus states</li><li>44 pt touch targets</li><li>Mirrored RTL layouts</li></ul>
+          </div>
+        </div>
+
+        <div class="bx b-ai" data-ruler>
+          <span class="bx-k mono">AI-assisted</span>
+          <h3>Faster research, more options explored</h3>
+          <p>I use ChatGPT, Claude and Perplexity to synthesize research, explore more alternatives and pressure-test flows before they reach a prototype.</p>
+          <div class="chips"><span>ChatGPT</span><span>Claude</span><span>Perplexity</span></div>
+        </div>
+
+        <div class="bx b-tools" data-ruler>
+          <span class="bx-k mono">Toolkit</span>
+          <h3>Daily tools</h3>
+          <div class="tools">
+            <span class="tool main"><b>Figma</b><em>Design, prototyping, variables</em></span>
+            <span class="tool"><b>Miro</b><em>Workshops, flows</em></span>
+            <span class="tool"><b>Notion</b><em>Docs, specs</em></span>
+            <span class="tool"><b>Adobe XD</b><em>Legacy projects</em></span>
+            <span class="tool"><b>Illustrator</b><em>Brand, icons</em></span>
+            <span class="tool"><b>Photoshop</b><em>Imagery</em></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="sh">
+        <div>
+          <span class="eyebrow"><svg viewBox="0 0 12 12"><path d="M3.5 1v10M8.5 1v10M1 3.5h10M1 8.5h10"/></svg>Work with me</span>
+          <h2 class="h2 split">Two ways to work together</h2>
+        </div>
+      </div>
+
+      <div class="svc-grid">
+        <article class="svc" data-ruler>
+          <span class="svc-k mono">For recruiters &amp; hiring teams</span>
+          <h3>Hiring a product designer?</h3>
+          <p>Senior UI/UX designer with 5+ years across B2B and B2C. I can own a product area end to end and work closely with product, engineering and QA.</p>
+          <dl class="svc-dl">
+            <div><dt>Looking for</dt><dd>Product Designer or Senior UI/UX roles</dd></div>
+            <div><dt>Domains</dt><dd>Travel, fintech, SaaS, logistics, e-commerce</dd></div>
+            <div><dt>Languages</dt><dd>Arabic &amp; English interfaces, RTL, GCC market</dd></div>
+          </dl>
+          <div class="svc-cta">
+            <a class="btn btn-w mag cv-dl" href="assets/Ibrahim-Magdy-CV.pdf" target="_blank" rel="noopener">Download CV</a>
+            <a class="btn btn-o mag" data-link="linkedin" href="https://www.linkedin.com/in/ibrahimagdy88/" target="_blank" rel="noopener">LinkedIn <svg class="i" viewBox="0 0 16 16"><path d="M5 11L11 5M6 5h5v5"/></svg></a>
+            <a class="btn btn-o mag" data-link="behance" href="https://www.behance.net/ibrahimmagdy14" target="_blank" rel="noopener">Behance <svg class="i" viewBox="0 0 16 16"><path d="M5 11L11 5M6 5h5v5"/></svg></a>
+          </div>
+        </article>
+
+        <article class="svc svc-c" data-ruler>
+          <span class="svc-k mono">For founders &amp; teams</span>
+          <h3>Building a product?</h3>
+          <p>I help founders and teams go from an idea to a launch-ready design: customer apps, admin dashboards and the system that ties them together.</p>
+          <ul class="offer">
+            <li><b>MVP product design</b><span>App and dashboard, ready for development</span></li>
+            <li><b>UX audit &amp; redesign</b><span>Find what blocks users, then fix it</span></li>
+            <li><b>Design system setup</b><span>Figma tokens, components and docs</span></li>
+            <li><b>Brand + product UI</b><span>Identity and interface, designed together</span></li>
+          </ul>
+          <ol class="svc-steps"><li>Discovery call</li><li>Flows &amp; wireframes</li><li>UI &amp; prototype</li><li>Handoff &amp; build review</li></ol>
+          <div class="svc-cta">
+            <a class="btn btn-w mag" href="#contact">Start a project</a>
+            <a class="btn btn-o mag" href="https://wa.me/201140082646" target="_blank" rel="noopener">WhatsApp <svg class="i" viewBox="0 0 16 16"><path d="M5 11L11 5M6 5h5v5"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ ABOUT / EXPERIENCE -->
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-l">
+        <span class="eyebrow"><svg viewBox="0 0 12 12"><path d="M3.5 1v10M8.5 1v10M1 3.5h10M1 8.5h10"/></svg>About</span>
+        <h2 class="h2 split">Experience</h2>
+        <p class="alt-name" data-keep>Ibrahim Magdy</p>
+        <p class="about-p">Cairo-based product designer. Commerce graduate turned designer, self-taught first, then trained through NTI, Udacity and Syntax. I care about clear flows, honest interfaces and systems that let teams ship faster.</p>
+        <div class="skills">
+          <span>End-to-end product design</span><span>Evaluative research</span><span>Usability testing</span><span>Information architecture</span><span>User flows</span><span>Interaction design</span><span>Prototyping</span><span>Design systems</span><span>Accessibility</span><span>B2B dashboards</span><span>RTL / localization</span><span>Implementation QA</span>
+        </div>
+      </div>
+      <div class="about-r">
+        <div class="xp" id="xp"></div>
+        <h3 class="sub">Education</h3>
+        <ul class="edu" id="edu"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ INDEX -->
+  <section class="index" id="index">
+    <div class="container">
+      <div class="sh">
+        <div>
+          <span class="eyebrow"><svg viewBox="0 0 12 12"><path d="M3.5 1v10M8.5 1v10M1 3.5h10M1 8.5h10"/></svg>Index</span>
+          <h2 class="h2 split">Every project, 2022 – 2026</h2>
+        </div>
+        <p class="sh-note">The full list, newest first. Each row opens a short case study.</p>
+      </div>
+      <div class="tbl">
+        <div class="tr th" aria-hidden="true"><span>Year</span><span>Project</span><span>What it is</span><span>Sector</span><span>Platforms</span><span></span></div>
+        <div id="tblBody"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="ct" data-ruler>
+        <canvas class="ct-flow" id="flow2" aria-hidden="true"></canvas>
+        <div class="ct-in">
+          <div class="ct-l">
+            <span class="eyebrow"><i class="pulse"></i>Available now</span>
+            <h2 class="h2 split">Have a product in mind? Let’s make it work for everyone who uses it.</h2>
+            <p>Full-time roles, freelance projects or a quick design review. I usually reply within a day.</p>
+          </div>
+          <div class="ct-r">
+            <div class="mail">
+              <span class="mono">Email</span>
+              <span class="mail-a" id="mailAddr">ibrahimagdy.o@gmail.com</span>
+              <button class="btn btn-w" id="copyMail" type="button"><svg class="i" viewBox="0 0 16 16"><rect x="5" y="5" width="8.5" height="8.5" rx="1.5"/><path d="M10.5 5V3.5A1.5 1.5 0 009 2H3.5A1.5 1.5 0 002 3.5V9a1.5 1.5 0 001.5 1.5H5"/></svg><span>Copy email</span></button>
+            </div>
+            <div class="ct-links">
+              <a href="https://www.linkedin.com/in/ibrahimagdy88/" target="_blank" rel="noopener"><span>LinkedIn</span><em>/in/ibrahimagdy88</em><svg class="i" viewBox="0 0 16 16"><path d="M5 11L11 5M6 5h5v5"/></svg></a>
+              <a href="https://www.behance.net/ibrahimmagdy14" target="_blank" rel="noopener"><span>Behance</span><em>/ibrahimmagdy14</em><svg class="i" viewBox="0 0 16 16"><path d="M5 11L11 5M6 5h5v5"/></svg></a>
+              <a href="https://wa.me/201140082646" target="_blank" rel="noopener"><span>WhatsApp</span><em>+20 114 008 2646</em><svg class="i" viewBox="0 0 16 16"><path d="M5 11L11 5M6 5h5v5"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot" id="foot">
+  <div class="container foot-in">
+    <div class="foot-row">
+      <span class="mono">© 2026 Ibrahim Magdy</span>
+      <span class="mono">Cairo · <span data-clock>--:--</span> <span data-tz></span></span>
+      <a class="mono up" href="#top">Back to top ↑</a>
+    </div>
+    <div class="wordmark" aria-hidden="true">Ibrahim Magdy</div>
+  </div>
+</footer>
+
+<div class="drawer" id="drawer" hidden>
+  <div class="dr-scrim" data-close></div>
+  <div class="dr-panel" role="dialog" aria-modal="true" aria-labelledby="drTitle" data-lenis-prevent>
+    <div class="dr-bar">
+      <span class="mono" id="drCount">01 / 08</span>
+      <div class="dr-nav">
+        <button type="button" class="dr-b" id="drPrev" aria-label="Previous project"><svg viewBox="0 0 16 16"><path d="M10 3L5 8l5 5"/></svg></button>
+        <button type="button" class="dr-b" id="drNext" aria-label="Next project"><svg viewBox="0 0 16 16"><path d="M6 3l5 5-5 5"/></svg></button>
+        <button type="button" class="dr-b" data-close aria-label="Close case study"><svg viewBox="0 0 16 16"><path d="M3.5 3.5l9 9M12.5 3.5l-9 9"/></svg></button>
+      </div>
+    </div>
+    <div class="dr-body" id="drBody"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="data.js"></script>
+<script src="covers.js"></script>
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+
+</body></html>
