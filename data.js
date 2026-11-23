@@ -38,7 +38,7 @@ window.PROJECTS = [
       "Keeping web and mobile consistent in both RTL Arabic and English",
       "Improving products that are already live, step by step, without breaking what works"
     ],
-    learned: "This is where I started working as a product designer: weighing business goals with user needs, deciding from data, and building a system that serves more than one product.",
+    learned: "Designing live products at this scale changed how I work: every decision is weighed against business goals and real usage data, and the design system has to serve several products at once, not just one.",
     links: [
       { label: "bookto.com", url: "https://bookto.com/" },
       { label: "Bookto · Google Play", url: "https://play.google.com/store/apps/details?id=com.techeffic.bookto" },
