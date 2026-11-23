@@ -310,7 +310,9 @@
   };
 
   window.coverHTML = function (p) {
-    const img = p.image ? `<img class="cover-img" src="${p.image}" alt="" loading="lazy" onerror="this.remove()">` : "";
+    const img = p.video
+      ? `<video class="cover-img" src="${p.video}"${p.poster ? ` poster="${p.poster}"` : ""} autoplay muted loop playsinline preload="metadata" aria-hidden="true" onerror="this.remove()"></video>`
+      : p.image ? `<img class="cover-img" src="${p.image}" alt="" loading="lazy" onerror="this.remove()">` : "";
     const c = covers[p.id];
     if (c) return c.html() + img;
     const [a, b] = hues[p.id] || ["#0b0d12", "#2b3b66"];

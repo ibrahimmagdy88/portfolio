@@ -225,6 +225,7 @@ section { position: relative; }
 .card:hover .peek { --ps: 1; }
 @media (hover: none) { .peek { display: none; } }
 .cover-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.cover-art:has(.cover-img) .dv { visibility: hidden; } /* real media replaces the drawn devices; labels stay */
 .meta { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 16px; padding-inline: 2px; }
 .meta h3 { margin: 0; font-family: var(--f-display); font-weight: 400; font-variation-settings: "wdth" 106, "wght" 620; font-size: clamp(1.45rem, 2.1vw, 1.95rem); line-height: 1.05; letter-spacing: -.015em; }
 .meta .yr { color: var(--fg-3); padding-top: 6px; }

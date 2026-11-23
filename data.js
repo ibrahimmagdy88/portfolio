@@ -1,5 +1,6 @@
 /* Content for the portfolio. Edit here: every section is rendered from these lists.
-   To use real screenshots instead of the generated artwork, set `image: "assets/your-shot.webp"` on a project. */
+   To use real screenshots instead of the generated artwork, set `image: "assets/your-shot.webp"` on a project,
+   or `video: "assets/your-clip.mp4"` (+ optional `poster: "assets/your-clip.jpg"`) for a looping motion cover. */
 
 window.SITE = {
   name: "Ibrahim Magdy",
@@ -110,6 +111,8 @@ window.PROJECTS = [
   {
     id: "igold",
     featured: true,
+    video: "assets/igold-cover.mp4",
+    poster: "assets/igold-cover.jpg",
     name: "iGold",
     short: "Jewelry commerce & POS",
     date: "2024-03",
