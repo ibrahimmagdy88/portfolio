@@ -17,6 +17,10 @@ window.PROJECTS = [
   {
     id: "travel",
     featured: true,
+    behance: [
+      { label: "Bookto", url: "https://www.behance.net/gallery/255880787/bookto" },
+      { label: "Wyanaa", url: "https://www.behance.net/gallery/254930533/Wyanaa-travels-website" }
+    ],
     name: "Bookto & the travel suite",
     short: "Travel booking platform",
     date: "2025-05",
@@ -111,6 +115,7 @@ window.PROJECTS = [
   {
     id: "igold",
     featured: true,
+    behance: [{ label: "iGold", url: "https://www.behance.net/gallery/255829185/Igold-Gold-Jewelry-Commerce-UX-Case-Study" }],
     video: "assets/igold-cover.mp4",
     poster: "assets/igold-cover.jpg",
     shots: {
@@ -389,7 +394,8 @@ window.PROJECTS = [
     links: []
   },
   {
-    id: "tabibak", name: "Tabibak", short: "Clinic booking app + redesign", date: "2022-01", year: "2022",
+    id: "tabibak", name: "Tabibak",
+    behance: [{ label: "Tabibak", url: "https://www.behance.net/gallery/216482299/Tabibak-A-Seamless-Healthcare-Mobile-App-Experience" }], short: "Clinic booking app + redesign", date: "2022-01", year: "2022",
     company: "Fantastic Hosting", role: "Designer", sector: "Healthcare",
     platforms: ["Mobile app"],
     summary: "My first product, designed on my first day, and redesigned ten months later.",

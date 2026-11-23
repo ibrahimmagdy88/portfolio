@@ -185,7 +185,7 @@ window.AR = {
   UI: {
     open: "افتح دراسة الحالة", product: "منتج", products: "منتجات", live: "مباشر",
     designed: "ما صممته", context: "السياق", work: "عملي", hard: "التحديات", learned: "ما تعلمته",
-    seeLive: "شاهده مباشرة", next: "المشروع التالي", gallery: "صور من المشروع", zoom: "عرض أكبر",
+    seeLive: "شاهده مباشرة", next: "المشروع التالي", gallery: "صور من المشروع", zoom: "عرض أكبر", csTitle: "دراسة الحالة كاملة على Behance", csSub: "البحث والقرارات الأساسية وكل الشاشات بالتفصيل.", csRead: "اقرأها على Behance", csTag: "دراسة حالة على Behance",
     year: "السنة", company: "الشركة", role: "الدور", sector: "القطاع",
     copied: "تم نسخ البريد", select: "تم التحديد. اضغط Ctrl+C أو ⌘C للنسخ", toLang: "Switch to English"
   },

@@ -46,7 +46,7 @@
         <div class="meta">
           <h3>${esc(p.name)}</h3><span class="yr mono">${esc(p.year)}</span>
           <p>${esc(p.summary)}</p>
-          <div class="tags"><span class="tag k">${esc(p.sector)}</span><span class="tag">${esc(p.company)}</span><span class="tag">${count(p.platforms.length)}</span></div>
+          <div class="tags"><span class="tag k">${esc(p.sector)}</span><span class="tag">${esc(p.company)}</span><span class="tag">${count(p.platforms.length)}</span>${p.behance && p.behance.length ? `<span class="tag be">${ui("csTag", "Behance case study")}</span>` : ""}</div>
         </div>
       </a>`).join("");
 
@@ -58,7 +58,7 @@
     $("#tblBody").innerHTML = all.map((p) => `
       <button type="button" class="tr" data-id="${p.id}" data-ruler>
         <span class="y">${p.date.slice(0, 4)}</span>
-        <span class="p">${esc(p.name)}${p.links && p.links.length ? `<span class="lv">${ui("live", "Live")}</span>` : ""}</span>
+        <span class="p">${esc(p.name)}${p.links && p.links.length ? `<span class="lv">${ui("live", "Live")}</span>` : ""}${p.behance && p.behance.length ? `<span class="lv be">Behance</span>` : ""}</span>
         <span class="d">${esc(p.short)}</span>
         <span class="s">${esc(p.sector)}</span>
         <span class="n">${count(p.platforms.length)}</span>
@@ -615,6 +615,15 @@ void main(){
   const drawer = $("#drawer");
   function sec(title, body, cls = "") { return `<section class="dr-sec ${cls}"><h4>${title}</h4>${body}</section>`; }
   function ul(list) { return `<ul>${list.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>`; }
+  /* link out to the full Behance case study (one button per study) */
+  function behanceCTA(p) {
+    const b = p.behance; if (!b || !b.length) return "";
+    const one = b.length === 1;
+    return `<div class="dr-cs">
+      <div class="dr-cs-t"><b>${ui("csTitle", "Full case study on Behance")}</b><span>${ui("csSub", "Research, key decisions and every screen, in depth.")}</span></div>
+      <div class="dr-cs-b">${b.map((x, i) => `<a class="btn ${i === 0 ? "btn-w" : "btn-o"}" href="${x.url}" target="_blank" rel="noopener">${one ? ui("csRead", "Read on Behance") : `${esc(x.label)} · Behance`} ${EXT}</a>`).join("")}</div>
+    </div>`;
+  }
   /* real screens placed after the section they illustrate: p.shots = { context: [], work: [], hard: [] } */
   function shots(p, key) {
     const list = p.shots && p.shots[key]; if (!list || !list.length) return "";
@@ -632,6 +641,7 @@ void main(){
       <h2 class="dr-h" id="drTitle">${esc(p.name)}</h2>
       <p class="dr-sum">${esc(p.summary)}</p>
       <dl class="dr-meta"><div><dt>${ui("year", "Year")}</dt><dd>${esc(p.year)}</dd></div><div><dt>${ui("company", "Company")}</dt><dd>${esc(p.company)}</dd></div><div><dt>${ui("role", "Role")}</dt><dd>${esc(p.role)}</dd></div><div><dt>${ui("sector", "Sector")}</dt><dd>${esc(p.sector)}</dd></div></dl>
+      ${behanceCTA(p)}
       ${sec(`${ui("designed", "What I designed")} · ${count(p.platforms.length)}`, `<div class="dr-plat">${p.platforms.map((x) => `<span class="tag">${esc(x)}</span>`).join("")}</div>`)}
       ${p.context ? sec(ui("context", "Context"), `<p>${esc(p.context)}</p>${shots(p, "context")}`) : ""}
       ${p.did && p.did.length ? sec(ui("work", "My work"), ul(p.did) + shots(p, "work")) : ""}
